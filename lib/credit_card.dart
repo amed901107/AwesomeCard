@@ -119,7 +119,7 @@ class _CreditCardState extends State<CreditCard>
         children: <Widget>[
           AwesomeCard(
             animation: _moveToBack,
-            child: _buildFrontCard(),
+            child: _buildFrontCard(context),
           ),
           AwesomeCard(
             animation: _moveToFront,
@@ -130,7 +130,7 @@ class _CreditCardState extends State<CreditCard>
     );
   }
 
-  Widget _buildFrontCard() {
+  Widget _buildFrontCard(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20),
       width: cardWidth,
@@ -172,8 +172,8 @@ class _CreditCardState extends State<CreditCard>
                             cardNumber: widget.cardNumber),
                         cardHeight: cardHeight,
                         cardWidth: cardWidth,
-                        textColor: widget.frontTextColor)
-                    .layout1(),
+                        textColor: widget.frontTextColor,context: context)
+                    .layout1(context),
           ],
         ),
       ),

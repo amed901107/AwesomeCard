@@ -66,6 +66,16 @@ Widget getCardTypeIcon({CardType? cardType, String? cardNumber}) {
         height: 50,
         package: 'awesome_card',
       );
+    case CardType.metro:
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Image.asset(
+          'images/card_provider/metro.png',
+          width: 35,
+          height: 35,
+          package: 'awesome_card',
+        ),
+      );
     default:
       return Container();
   }
